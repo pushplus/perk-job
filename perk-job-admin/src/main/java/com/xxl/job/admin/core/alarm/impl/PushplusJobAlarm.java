@@ -48,7 +48,6 @@ public class PushplusJobAlarm implements JobAlarm {
     public boolean doAlarm(XxlJobInfo info, XxlJobLog jobLog){
         boolean alarmResult = true;
 
-        // send monitor email
         if (info!=null && !StringUtil.isNullOrEmpty(token)) {
 
             // alarmContent
@@ -59,8 +58,7 @@ public class PushplusJobAlarm implements JobAlarm {
             if (jobLog.getHandleCode()>0 && jobLog.getHandleCode() != ReturnT.SUCCESS_CODE) {
                 alarmContent += "<br>HandleCode=" + jobLog.getHandleMsg();
             }
-
-            // email info
+ 
             XxlJobGroup group = XxlJobAdminConfig.getAdminConfig().getXxlJobGroupDao().load(Integer.valueOf(info.getJobGroup()));
 
             String title = I18nUtil.getString("jobconf_monitor");
@@ -91,7 +89,7 @@ public class PushplusJobAlarm implements JobAlarm {
     }
 
     /**
-     * load email job alarm template
+     * load pushplus job alarm template
      *
      * @return
      */
