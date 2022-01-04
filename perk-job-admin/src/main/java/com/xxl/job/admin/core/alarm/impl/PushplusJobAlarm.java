@@ -15,6 +15,7 @@ import io.netty.util.internal.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.text.MessageFormat;
@@ -24,6 +25,7 @@ import java.text.MessageFormat;
  * @date 2022/1/4
  */
 @Component
+@Order(1)
 public class PushplusJobAlarm implements JobAlarm {
 
     private static Logger logger = LoggerFactory.getLogger(PushplusJobAlarm.class);
@@ -95,16 +97,16 @@ public class PushplusJobAlarm implements JobAlarm {
      */
     private static final String loadEmailJobAlarmTemplate(){
         StringBuilder mailBody= new StringBuilder();
-        mailBody.append("<h5>").append(I18nUtil.getString("jobconf_monitor_detail")).append("</h5>");
-        mailBody.append("<div style=\"margin: 10px 20px\">\n")
-                .append("                  <ul >\n")
-                .append("                    <li>").append(I18nUtil.getString("jobinfo_field_jobgroup")).append("：&nbsp;  ").append("{0}</li>\n")
-                .append("                    <li>").append(I18nUtil.getString("jobinfo_field_id")).append("：&nbsp;  ").append("{1}</li>\n")
-                .append("                    <li>").append(I18nUtil.getString("jobinfo_field_jobdesc")).append("：&nbsp;  ").append("{2}</li>\n")
-                .append("                    <li>").append(I18nUtil.getString("jobconf_monitor_alarm_title")).append("：&nbsp;  ").append(I18nUtil.getString("jobconf_monitor_alarm_type") ).append("</li>\n")
-                .append("                    <li>").append(I18nUtil.getString("jobconf_monitor_alarm_content")).append("：&nbsp;  \n").append("{3}</li>\n")
-                .append("                </ul>\n")
-                .append("            </div>");
+        mailBody.append("<h5 style=\"text-align: center;\">").append(I18nUtil.getString("jobconf_monitor_detail")).append("</h5>");
+        mailBody.append("<div>")
+                .append("<ul style=\"padding: 0px 0px 0px 5px;list-style:none;\">")
+                .append("<li><span style=\"font-weight: bold;\">").append(I18nUtil.getString("jobinfo_field_jobgroup")).append("：</span>").append("{0}</li>\n")
+                .append("<li><span style=\"font-weight: bold;\">").append(I18nUtil.getString("jobinfo_field_id")).append("：</span>").append("{1}</li>\n")
+                .append("<li><span style=\"font-weight: bold;\">").append(I18nUtil.getString("jobinfo_field_jobdesc")).append("：</span>").append("{2}</li>\n")
+                .append("<li><span style=\"font-weight: bold;\">").append(I18nUtil.getString("jobconf_monitor_alarm_title")).append("：</span>").append(I18nUtil.getString("jobconf_monitor_alarm_type") ).append("</li>\n")
+                .append("<li><span style=\"font-weight: bold;\">").append(I18nUtil.getString("jobconf_monitor_alarm_content")).append("：</span>\n").append("{3}</li>\n")
+                .append("</ul>")
+                .append("</div>");
 
         return mailBody.toString();
     }
