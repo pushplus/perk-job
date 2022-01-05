@@ -8,10 +8,10 @@
 2. xxl_job_info表中新增字段alarm_pushplus字段。用于存储单个任务是否开启pushplus推送。
 3. 新增PushplusJobAlarm.java类，实现pushplus告警逻辑。
 4. 任务详情页面增加“pushplus推送”开关，可以控制单个任务是否启用pushplus推送。
-5. application.properties文件增加pushplus.token和pushplus.topic两个参数。具体配置参数值访问: https://www.pushplus.plus获取。
+5. application.properties文件增加pushplus.token和pushplus.topic两个参数。具体配置参数值访问: https://www.pushplus.plus/ 获取。
 
 ## 使用方式
-1. 从pushplus官方（www.pushplus.plus）获取自己的token，如需要多人接收还需创建群组，获取群组编码。
+1. 从pushplus官方（htts://www.pushplus.plus/ ）获取自己的token，如需要多人接收还需创建群组，获取群组编码。
 2. 在application.properties中pushplus.token填入自己的token。如需群发在pushplus.topic填入创建的群组编码。
 3. 编译perk-job-admin项目，打成jar包。
 4. 运行项目，命令：nohup java -jar perk-job-admin-2.3.0.jar > /dev/null 2>&1&
