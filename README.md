@@ -29,6 +29,8 @@ ALTER TABLE `xxl_job_info`
 
 9. 当job执行时发生异常，微信上即可收到来自“pushplus 推送加”公众号上的告警消息。
 
+![](doc/images/pushplus.png)
+
 ***
 
 <p align="center" >
