@@ -264,10 +264,15 @@ public class XxlJobServiceImpl implements XxlJobService {
 			}
 		}
 
+		if(jobInfo.getAlarmPushplus()==null){
+			jobInfo.setAlarmPushplus(0);
+		}
+
 		exists_jobInfo.setJobGroup(jobInfo.getJobGroup());
 		exists_jobInfo.setJobDesc(jobInfo.getJobDesc());
 		exists_jobInfo.setAuthor(jobInfo.getAuthor());
 		exists_jobInfo.setAlarmEmail(jobInfo.getAlarmEmail());
+		exists_jobInfo.setAlarmPushplus(jobInfo.getAlarmPushplus());
 		exists_jobInfo.setScheduleType(jobInfo.getScheduleType());
 		exists_jobInfo.setScheduleConf(jobInfo.getScheduleConf());
 		exists_jobInfo.setMisfireStrategy(jobInfo.getMisfireStrategy());

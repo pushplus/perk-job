@@ -135,6 +135,12 @@
                         <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmemail}<font color="black">*</font></label>
                         <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="${I18n.jobinfo_field_alarmemail_placeholder}" maxlength="100" ></div>
                     </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmpushplus}<font color="black">*</font></label>
+                        <div class="col-sm-4 checkbox-inline" style="margin-left: 15px">
+                            <label><input type="checkbox" name="alarmPushplus" value="1">${I18n.system_on}</label>
+                        </div>
+                    </div>
 
                     <br>
                     <p style="margin: 0 0 10px;text-align: left;border-bottom: 1px solid #e5e5e5;color: gray;">${I18n.jobinfo_conf_schedule}</p>    <#-- 调度 -->
@@ -379,6 +385,12 @@ exit 0
                         <div class="col-sm-4"><input type="text" class="form-control" name="author" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_author}" maxlength="50" ></div>
                         <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmemail}<font color="black">*</font></label>
                         <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="${I18n.jobinfo_field_alarmemail_placeholder}" maxlength="100" ></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmpushplus}<font color="black">*</font></label>
+                        <div class="col-sm-4 checkbox-inline" style="margin-left: 15px">
+                            <label><input type="checkbox" name="alarmPushplus" value="1">${I18n.system_on}</label>
+                        </div>
                     </div>
 
                     <br>

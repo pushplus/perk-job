@@ -19,6 +19,7 @@ public class XxlJobInfo {
 	
 	private String author;		// 负责人
 	private String alarmEmail;	// 报警邮件
+	private Integer alarmPushplus; //pushplus报警
 
 	private String scheduleType;			// 调度类型
 	private String scheduleConf;			// 调度配置，值含义取决于调度类型
@@ -233,5 +234,13 @@ public class XxlJobInfo {
 
 	public void setTriggerNextTime(long triggerNextTime) {
 		this.triggerNextTime = triggerNextTime;
+	}
+
+	public Integer getAlarmPushplus() {
+		return alarmPushplus;
+	}
+
+	public void setAlarmPushplus(Integer alarmPushplus) {
+		this.alarmPushplus = alarmPushplus;
 	}
 }
