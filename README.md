@@ -16,7 +16,7 @@
 ALTER TABLE `xxl_job_info`
     ADD COLUMN `alarm_pushplus` int NULL DEFAULT 0 COMMENT '是否启用pushplus推送；0否，1是' AFTER `alarm_email`;
 ```
-2. 从pushplus官方（htts://www.pushplus.plus/ ）获取自己的token，如需要多人接收还需创建群组，获取群组编码。
+2. 从pushplus官方（https://www.pushplus.plus/ ）获取自己的token，如需要多人接收还需创建群组，获取群组编码。
 3. 在application.properties中pushplus.token填入自己的token。如需群发在pushplus.topic填入创建的群组编码。
 
 ![](doc/images/project.png)
