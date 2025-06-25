@@ -4,7 +4,7 @@
 > xxl-job项目参考官方仓库：https://github.com/xuxueli/xxl-job
 
 ## 修改点
-1. 基于xxl-job V2.3.0官方源码修改。
+1. 基于xxl-job V3.1.2-SNAPSHOT官方源码修改。
 2. xxl_job_info表中新增字段alarm_pushplus字段。用于存储单个任务是否开启pushplus推送。
 3. 新增PushplusJobAlarm.java类，实现pushplus告警逻辑。
 4. 任务详情页面增加“pushplus推送”开关，可以控制单个任务是否启用pushplus推送。
@@ -22,7 +22,7 @@ ALTER TABLE `xxl_job_info`
 ![](doc/images/project.png)
 
 5. 编译perk-job-admin项目，打成jar包。
-6. 运行项目，命令：nohup java -jar perk-job-admin-2.3.0.jar > /dev/null 2>&1&
+6. 运行项目，命令：nohup java -jar perk-job-admin-3.1.2-SNAPSHOT.jar > /dev/null 2>&1&
 7. 访问系统，正常创建需要的定时任务。在任务详情页面勾选“pushplus推送”选项。
 
 ![](doc/images/job.png)
